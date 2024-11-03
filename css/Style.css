@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+:root {
+    --main-color: #00eeff;
+    --text-color: White;
+    --bg-color-01: #1f242d;
+    --bg-color-02: #373d49;
+    --color-00: #0000001a;
+
+    /* Extra color */
+    --color-01: #929314;
+    --color-02: #00000013;
+    --color-03: #29000026;
+    --color-04: #4b4b4b;
+    --color-05: #59595900;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--bg-color-01);
+    color: var(--text-color);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.1rem;
+    background-color: #9999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    border: solid 1px var(--bg-color-01); 
+}
+
+.logo {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+}
+
+.nav a {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    transition: 0.4s;
+}
+
+.nav a:hover {
+    color: var(--main-color);
+}
+
+section {
+    min-height: 100vh;
+    padding: 6rem 6rem 2rem;
+    border: solid 1px var(--color-01); 
+}
+
+span {
+    color: var(--main-color);
+}
+
+.home, .about {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.home-img {
+    position: relative; 
+    border-right: solid 0.6rem transparent; 
+    border-bottom: solid 0.6rem var(--main-color); 
+    border-image: linear-gradient(250deg, var(--main-color), var(--main-color));
+    border-image-slice: 1; 
+    border-image-width: 0.6rem; 
+}
+
+.about-img {
+    position: relative; 
+    border-left: solid 0.6rem transparent; 
+    border-bottom: solid 0.6rem transparent; 
+    border-image: linear-gradient(135deg, transparent 5%,, var(--main-color)); 
+    border-image-slice: 1; 
+    border-image-width: 0.6rem; 
+}
+
+img {
+    display: block; 
+    width: 100%; 
+    height: auto; 
+}
+
+
+.home-img img, .about-img img {
+    width: 100%;
+}
+
+.about {
+    background-color: var(--bg-color-02);
+}
+
+.home-content, .about-content {
+    width: 45%;
+}
+
+.home-content h3, .about-content h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.home-content h1, .about-content h1 {
+    font-size: 2.7rem; /* test */
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-content p, .about-content p {
+    margin-top: 1.2rem;
+    text-align: justify;
+}
+
+.services h2,
+.portfolio h2,
+.contact h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.services-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.box {
+    flex: 1 1 30%; 
+    min-width: 20rem; 
+    margin: 1rem; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 1rem 2.5rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    border: solid 0.15rem var(--bg-color-01);
+    background-color: var(--bg-color-02);
+    transition: 0.5s ease;
+}
+
+.services-container .box:hover {
+    border-color: var(--main-color);
+    transform: scale(1.01);
+}
+
+.box i {
+    font-size: 4.3rem;
+    color: var(--main-color);
+}
+
+.box h3 {
+    font-size: 1.5rem;
+}
+
+.box p {
+    display: -webkit-box; 
+    -webkit-box-orient: vertical; 
+    -webkit-line-clamp: 3;
+    line-clamp: 3; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+
+
+
+@media (max-width: 768px) {
+    .services-container .box {
+        flex: 1 1 100%; 
+    }
+}
